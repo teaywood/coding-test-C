@@ -139,7 +139,7 @@ def initial_children(problem):
 
 
 def create_page(api, problem):
-    properties = {"제목": {"title": rich(problem["title"])},
+    properties = {"제목": {"title": rich(f"[Lv. {problem['level']}] {problem['title']}")},
                   "언어": {"select": {"name": problem["language"]}},
                   "분야": {"select": {"name": "알고리즘"}},
                   "GitHub 풀이": {"url": problem["url"]}}
