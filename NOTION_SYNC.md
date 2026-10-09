@@ -7,7 +7,7 @@
 ## 현재 상태
 
 기존 풀이 21개(Python 20개, C 1개)는 이미 노션에 가져왔습니다.
-자동화 코드는 설치되어 있지만, `NOTION_TOKEN` 비밀값과 노션 페이지 접근 권한을 설정해야 실제로 동작합니다.
+2026-10-09 연결 키와 페이지 접근 권한 설정 후 두 저장소의 실제 실행을 확인했습니다. Python 20개, C 1개를 기존 기록으로 인식했고, 중복 생성이나 건너뛴 기록 없이 정상 완료했습니다. 아래 설정 절차는 재설정할 때 참고할 수 있습니다.
 
 ## 1. 노션 연결 만들기
 
@@ -57,6 +57,6 @@
 
 Python 표준 라이브러리만 사용하며 저장소의 풀이 코드를 실행하지 않습니다.
 실제 기존 21개 데이터의 날짜/개념 파싱, 반복 실행 중복 방지, 코드 변경 시 사용자 속성 보존, 관리 영역 삭제 시 건너뛰기를 검증했습니다.
-노션 키 설정 전에는 실제 API 자동화의 전체 실행을 확인할 수 없습니다.
+실제 GitHub Actions에서 노션 접속, 기존 기록 조회, 관리 코드 블록 비교가 정상 동작함을 확인했습니다. 새 페이지 생성과 변경된 코드 갱신의 로직은 테스트로 검증했습니다.
 
 참고: [Notion 내부 연결](https://developers.notion.com/guides/get-started/internal-connections), [GitHub Actions 비밀값](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets)
