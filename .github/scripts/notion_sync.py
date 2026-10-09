@@ -127,7 +127,6 @@ def initial_children(problem):
     if problem["problem_url"]:
         children.append(block("paragraph", problem["problem_url"]))
     children.append(block("toggle", MANAGED, children=[
-        block("paragraph", "GitHub에 저장된 풀이입니다. 자동화는 이 영역의 코드만 갱신합니다."),
         code_block(problem)]))
     if problem["notes"]:
         children.append(block("heading_2", "GitHub에 남긴 공부 메모"))
